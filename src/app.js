@@ -63,17 +63,36 @@ myStatus.innerText = "Przesłano"
 //   document.body.appendChild(img);
 //   })
 
-//Listowanie plików ze Storage
+// Wyświetlenie wszystkich obrazków dostępne w Storage wraz z ich nazwami. Do każdego obrazka dodaj przycisk, który będzie odpowiedzialny za usunięcie obrazka. Po usunięciu obrazka odśwież listę obrazków tak aby usunięty obrazek nie był już więcej wyświetlany. [Nie odświeżaj całej strony]
+
 const storageRef = ref(storage);
 listAll(storageRef).then((res) => {
-  const myOl = document.createElement("ol");
   res.items.forEach(item => {
-  const myLi = document.createElement("li");
-  myLi.innerText = item.fullPath;
-  myOl.appendChild(myLi);
-  
-  })
+    getDownloadURL(item).then(url => {
+    const myDiv = document.createElement("div");
+    const myImg = document.createElement("img");
+    const myHeader = document.createElement("h3");
+    const myButton = document.createElement("button");
+    myButton.innerText = "usuń";
+    myImg.src = url;
 
-  document.body.appendChild(myOl);
+
+    myDiv.appendChild(myHeader);
+    myDiv.appendChild(myImg);
+    myDiv.appendChild(myButton);
+    document.body.appendChild(myDiv);
+
+
+    myButton.addEventListener("click", () => {
+      
+   deleteObject(item).then(() => {
+   document.body.removeChild(myDiv);
   })
+  })
+  })
+})
+})
+
+
+
 
