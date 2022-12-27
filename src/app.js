@@ -18,3 +18,40 @@ const app = initializeApp(firebaseConfig);
 const storage = getStorage(app);
 const db = getFirestore(app);
 
+
+
+const myImg = document.createElement("img");
+document.body.appendChild(myImg);
+const myInput = document.getElementById("myInput");
+
+myInput.addEventListener("change", () => {
+  const thumbnail = document.getElementById("thumbnail");
+  const file = myInput.files[0];
+  console.log(file.name);
+  const fileReader = new FileReader();
+  fileReader.readAsDataURL(file);
+  fileReader.onloadend = function() {
+      thumbnail.src = fileReader.result;
+  }
+  console.log(file.name);
+})
+
+const myBtn = document.getElementById("myBtn");
+myBtn.addEventListener("click", () => {
+  const myStatus = document.getElementById("myStatus");
+  const myFileNameInput = document.getElementById("myFileName");
+  const file = myInput.files[0];
+  let filename = "";
+  if(myFileNameInput.value){
+    filename = myFileNameInput.value;
+}
+else {
+    filename = file.name;
+}
+const myImageRef = ref(storage, filename);
+myStatus.innerText = "Przesyłanie";
+uploadBytes(myImageRef, file).then (() =>{
+myStatus.innerText = "Przesłano"
+})
+});
+
