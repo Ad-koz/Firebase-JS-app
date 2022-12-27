@@ -56,10 +56,24 @@ myStatus.innerText = "Przesłano"
 });
 
 //Wyświetlenie konkretnego pliku, podając jego nazwę przy użyciu getDownloadURL
-const imageRef = ref(storage, "tatry.JPG");
-getDownloadURL(imageRef).then(url => {
-  const img = document.createElement("img");
-  img.src = url;
-  document.body.appendChild(img);
+// const imageRef = ref(storage, "tatry.JPG");
+// getDownloadURL(imageRef).then(url => {
+//   const img = document.createElement("img");
+//   img.src = url;
+//   document.body.appendChild(img);
+//   })
+
+//Listowanie plików ze Storage
+const storageRef = ref(storage);
+listAll(storageRef).then((res) => {
+  const myOl = document.createElement("ol");
+  res.items.forEach(item => {
+  const myLi = document.createElement("li");
+  myLi.innerText = item.fullPath;
+  myOl.appendChild(myLi);
+  
+  })
+
+  document.body.appendChild(myOl);
   })
 
