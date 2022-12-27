@@ -93,6 +93,28 @@ listAll(storageRef).then((res) => {
 })
 })
 
+// Napisz aplikację, która pobiera wybranego użytkownika z bazy danych, a następnie wszystkie jego dane wprowadza do istniejących pól typu input. Użytkownik ma możliwość edycji danych, a następnie zapisania zmian.
 
+const button = document.getElementById("myButton");
+const myName = document.getElementById("myName");
+const mySurname = document.getElementById("mySurname");
+const myAge = document.getElementById("myAge");
 
+myName.placeholder = "podaj imię użytkownika";
+mySurname.placeholder = "podaj nazwisko użytkownika";
+myAge.placeholder = "podaj wiek użytkownika";
 
+button.addEventListener("click", () =>{
+const thisDoc = doc(db, "users", `${myName.value}_${mySurname.value}`)
+setDoc(thisDoc, {
+name: myName.value,
+surname: mySurname.value,
+age: myAge.value
+}).then((res) => {
+  myName.placeholder = "podaj imię użytkownika";
+mySurname.placeholder = "podaj nazwisko użytkownika";
+myAge.placeholder = "podaj wiek użytkownika";
+
+});
+})
+document.body.appendChild(button);
