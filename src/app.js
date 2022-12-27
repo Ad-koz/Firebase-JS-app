@@ -55,3 +55,11 @@ myStatus.innerText = "Przesłano"
 })
 });
 
+//Wyświetlenie konkretnego pliku, podając jego nazwę przy użyciu getDownloadURL
+const imageRef = ref(storage, "tatry.JPG");
+getDownloadURL(imageRef).then(url => {
+  const img = document.createElement("img");
+  img.src = url;
+  document.body.appendChild(img);
+  })
+
