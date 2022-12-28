@@ -119,7 +119,38 @@ myAge.value = "";
 
 });
 })
-document.body.appendChild(button);
+//document.body.appendChild(button);
 
 //wyszukiwanie użytkownika
 
+const findBtn = document.getElementById("findBtn");
+const findName = document.getElementById("name");
+const findSurname = document.getElementById("surname");
+const usersList = document.getElementById("usersList");
+const users = collection(db, "users");
+findName.placeholder = "podaj imię";
+findSurname.placeholder = "podaj nazwisko";
+
+
+findBtn.addEventListener("click", () => {
+  const queryUserName = query(users, where("name","==", findName.value));
+  const queryUserSurname = query(users, where("surname","==", findSurname.value));
+  // getDocs(queryUserSurname).then((docs) => {
+  //   docs.forEach(userDoc => {
+  //                 const user = userDoc.data();
+  //                 const userListItem = document.createElement("li");
+  //                 userListItem.innerText = `${user.name} ${user.surname}`;
+  //                usersList.appendChild(userListItem);
+  //   });
+  // })
+  getDocs(queryUserName).then((docs) => {
+    docs.forEach(userDoc => {
+                  const user = userDoc.data();
+                  const userListItem = document.createElement("li");
+                  userListItem.innerText = `${user.name} ${user.surname}`;
+                 usersList.appendChild(userListItem);
+                  
+    })
+  })
+
+})
