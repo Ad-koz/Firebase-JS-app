@@ -111,9 +111,9 @@ name: myName.value,
 surname: mySurname.value,
 age: myAge.value
 }).then((res) => {
-  myName.placeholder = "podaj imię użytkownika";
-mySurname.placeholder = "podaj nazwisko użytkownika";
-myAge.placeholder = "podaj wiek użytkownika";
+  myName.value = "";
+mySurname.value = "";
+myAge.value = "";
 
 });
 })
