@@ -135,6 +135,7 @@ findSurname.placeholder = "podaj nazwisko";
 findBtn.addEventListener("click", () => {
   const queryUserName = query(users, where("name","==", findName.value));
   const queryUserSurname = query(users, where("surname","==", findSurname.value));
+  
   // getDocs(queryUserSurname).then((docs) => {
   //   docs.forEach(userDoc => {
   //                 const user = userDoc.data();
@@ -152,5 +153,41 @@ findBtn.addEventListener("click", () => {
                   
     })
   })
-
 })
+
+//Albumy
+
+const imgInput = document.getElementById("imgInput");
+const uploadButton = document.getElementById("albumButton");
+let selectAlbum = document.getElementById("albums");
+
+
+const albums = ["Album1", "Album2"];
+const Album1 = document.getElementById("1");
+const Album2 = document.getElementById("2");
+Album1.value = albums[0];
+Album2.value = albums[1];
+Album1.textContent = albums[0];
+Album2.textContent = albums[1];
+
+
+const storageAlbum1Ref = ref(storage, 'Album1');
+const storageAlbum2Ref = ref(storage, 'Album2');
+let filename ="";
+
+if (selectAlbum.value === "Album1") {
+  uploadButton.addEventListener("click", () => {
+    const file = imgInput.files[0];
+   filename = file.name;
+  const myImageRef = ref(storageAlbum1Ref, filename);
+uploadBytes(myImageRef, file);
+});
+}
+if (selectAlbum.value === "Album2") {
+  uploadButton.addEventListener("click", () => {
+    const file = imgInput.files[0];
+  filename = file.name;
+  const myImageRef = ref(storageAlbum2Ref, filename);
+uploadBytes(myImageRef, file);
+});
+}

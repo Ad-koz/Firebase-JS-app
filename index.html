@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&display=swap" rel="stylesheet">
 </head>
 <body>
     <h4>Dodaj zdjęcie</h4>
     <input id="myInput" type="file">
     <input id="myFileName">
-    <button id="myBtn">Wgraj</button>
+    <button id="myBtn">Dodaj</button>
     <h2 id="myStatus"></h2>
     <h4>Wprowadź dane użytkownika</h4>
     <img id= "thumbnail"> 
@@ -35,5 +36,14 @@
     
     <!-- <button id = "addEmployee">Add employee</button> -->
     <ol id="usersList"></ol> 
+    <h3>Prześlij plik do wybranego albumu</h3>
+    <h4>Dostępne albumy</h4>
+    <select id="albums">
+        <option id ="1">Album1</option>
+        <option id="2">Album2</option>
+    </select>
+    <input id= "imgInput" type="file">
+    <button id= "albumButton">Dodaj</button>
+    
 </body>
 </html>
