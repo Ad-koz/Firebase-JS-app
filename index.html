@@ -5,39 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
-    <h4>Dodaj zdjęcie</h4>
-    <input id="myInput" type="file">
-    <input id="myFileName">
-    <button id="myBtn">Dodaj</button>
-    <h2 id="myStatus"></h2>
-    <h4>Wprowadź dane użytkownika</h4>
-    <img id= "thumbnail"> 
-    <input id="myName">
-    <input id="mySurname">
-    <input id="myAge">
+<div id="firstBox">
+   <h4 id="firstH4">Dodaj zdjęcie do galerii</h4>
+      <div id="firstDiv"></div>
+
+      <div id="pictureUpload">
+      <input id="myInput" type="file">
+      <input id="myFileName" placeholder="utwórz nazwę">
+      <button id="myBtn">Dodaj</button>
+      <img id= "thumbnail"> 
+      </div>
+      <h2 id="myStatus"></h2>
+</div>
+
+<div id="secondBox">
+    <h4 id="secondH4">Wprowadź dane użytkownika</h4>
+    <div id="secondDiv">
+      <input id="myName">
+      <input id="mySurname">
+      <input id="myAge">
     
-    <select id="department">
+      <select id="department">
         <option>IT</option>
         <option>HR</option>
         <option>FINANCE</option>
-    </select>
-    <button id = "myButton">Dodaj</button> 
+      </select>
+      <button id = "myButton">Dodaj</button>
+    </div> 
+</div>
    <!-- <input id="queryName"> -->
-   <br>
     <br>
     <br>
-    <h4>Wyszukaj użytkownika</h4>
-    <input id="name">
-    <input id="surname">
-    <button id="findBtn">Szukaj</button> 
+    <br>
+<div id="thirdBox">
+    <h4 id="thirdH4">Wyszukaj użytkownika</h4>
+    <div id="thirdDiv">
+      <input id="name">
+      <input id="surname">
+      <button id="findBtn">Szukaj</button> 
     
     <!-- <button id = "addEmployee">Add employee</button> -->
-    <ol id="usersList"></ol> 
-    <h3>Prześlij plik do wybranego albumu</h3>
-    <h4>Dostępne albumy</h4>
+      <ol id="usersList"></ol>
+    </div>
+</div> 
+    <h4>Prześlij plik do wybranego albumu</h4>
+    <h5>Dostępne albumy</h5>
     <select id="albums">
         <option id ="1">Album1</option>
         <option id="2">Album2</option>

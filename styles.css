@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,500;0,700;1,200&display=swap');
+* {
+   
+    font-family: "Montserrat", sans-serif;
+}
+#thumbnail{
+    width: 200px;
+}
+img {
+    
+    width: 100px;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+#firstH4 {
+    display: flex;
+    justify-content: center;   
+}
+#firstDiv {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px ;
+}
+
+#btn {
+    height: 20px;
+}
+#firstDiv #btn {
+    display: flex;
+    align-content: center;
+    margin-right: 30px;
+}
+#firstBox {
+    background-color: rgb(211, 211, 240);
+}
+#pictureUpload {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+#pictureUpload #myBtn {
+    height: 20px;
+}
+#pictureUpload #myFileName {
+    height: 15px;
+    width: 200px;
+}
+#myStatus {
+    display: flex;
+    justify-content: center;
+}
+#thumbnail {
+    display: flex;
+    justify-content: center;
+}
+#secondDiv {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+#secondH4 {
+    display: flex;
+    justify-content: center;
+}
+#thirdH4 {
+    display: flex;
+    justify-content: center;
+}
+#thirdDiv {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+   
+}
+#thirdBox{
+    background-color: rgb(211, 211, 240);
+}
