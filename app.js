@@ -55,8 +55,7 @@ uploadBytes(myImageRef, file).then (() =>{
 myStatus.innerText = "Przesłano"
 })
 
-.then(result => {
-
+.then(result => {location.reload(true);
 })
 });
 

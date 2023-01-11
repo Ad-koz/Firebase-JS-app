@@ -74,9 +74,22 @@ body {
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-bottom: 30px;
-   
+    margin-top: 30px;
 }
 #thirdBox{
     background-color: rgb(211, 211, 240);
+}
+#fourthH4 {
+    display: flex;
+    justify-content: center;
+}
+#usersList {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+#fourthDiv {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
