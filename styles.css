@@ -1,10 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,500;0,700;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,500;0,600;0,700;1,200&display=swap');
 * {
    
     font-family: "Montserrat", sans-serif;
 }
 #thumbnail{
     width: 200px;
+}
+h4 {
+    font-weight: 600;
 }
 img {
     
@@ -13,43 +16,43 @@ img {
 body {
     font-family: 'Montserrat', sans-serif;
 }
-#firstH4 {
+#first-h4 {
     display: flex;
     justify-content: center;   
 }
-#firstDiv {
+#first-div {
     display: flex;
     flex-direction: row;
     align-content: space-between;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 30px ;
+    margin-bottom: 30px;
 }
 
 #btn {
     height: 20px;
 }
-#firstDiv #btn {
+#first-div #btn {
     display: flex;
     align-content: center;
     margin-right: 30px;
 }
-#firstBox {
+#first-box {
     background-color: rgb(211, 211, 240);
 }
-#pictureUpload {
+#picture-upload {
     display: flex;
     justify-content: center;
     gap: 20px;
 }
-#pictureUpload #myBtn {
+#picture-upload #my-btn {
     height: 20px;
 }
-#pictureUpload #myFileName {
+#picture-upload #my-file-name {
     height: 15px;
     width: 200px;
 }
-#myStatus {
+#my-status {
     display: flex;
     justify-content: center;
 }
@@ -57,39 +60,106 @@ body {
     display: flex;
     justify-content: center;
 }
-#secondDiv {
+#second-div {
     display: flex;
     justify-content: center;
     gap: 10px;
 }
-#secondH4 {
+#second-h4 {
     display: flex;
     justify-content: center;
 }
-#thirdH4 {
+#third-h4 {
     display: flex;
     justify-content: center;
 }
-#thirdDiv {
+#third-div {
     display: flex;
     justify-content: center;
     gap: 10px;
     margin-top: 30px;
 }
-#thirdBox{
+#third-box{
     background-color: rgb(211, 211, 240);
 }
-#fourthH4 {
+#fourth-h4 {
     display: flex;
     justify-content: center;
 }
-#usersList {
+#users-list {
     display: flex;
     justify-content: center;
     gap: 30px;
 }
-#fourthDiv {
+#fourth-div {
     display: flex;
     justify-content: center;
     gap: 10px;
+}
+nav {
+    background-color: rgb(238, 237, 237);
+    display: flex;
+    justify-content: end;
+    gap: 50px;
+    border-bottom: 1px solid rgb(238, 237, 237);
+    padding: 10px;
+    box-shadow: 0 5px 5px -3px rgb(172, 171, 171);
+    
+  }
+nav #fourth-span {
+    display: flex;
+    margin-right: 100px;
+}
+
+#album1-div {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+#album2-div {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+#album1-div #btn {
+    display: flex;
+    align-content: center;
+    margin-right: 30px;
+    
+}
+#album2-div #btn {
+    display: flex;
+    align-content: center;
+    margin-right: 30px;
+}
+h5 {
+    display: flex;
+    justify-content: center;   
+    font-weight: 600;
+}
+#album-box1 {
+    border-top: 1px solid rgb(186, 183, 183);
+}
+#album-box2 {
+    border-top: 1px solid rgb(186, 183, 183);
+}
+span a{
+    
+    color: rgb(1, 1, 1);
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 2px 15px;
+    border-radius: 20px;
+    transition: 0.03s;
+    transition-property: background;      
+}
+span a:hover{
+    background: #acaaaa ;
 }

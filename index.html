@@ -9,60 +9,79 @@
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
-<div id="firstBox">
-   <h4 id="firstH4">Dodaj zdjęcie do galerii</h4>
-      <div id="firstDiv"></div>
+  <nav>
+    <span class="nav-span" id="first-span"><a href="#"> Galeria</a></span>
+    <span class="nav-span" id="second-span"><a href="#"> Pracownicy</a></span>
+    <span class="nav-span" id="third-span"><a href="#"> Czat</a></span>
+    <span class="nav-span" id="fourth-span"><a href="#"> Kontakt</a></span>
+  </nav>
+<div id = "page-content" >
 
-      <div id="pictureUpload">
-      <input id="myInput" type="file">
-      <input id="myFileName" placeholder="utwórz nazwę">
-      <button id="myBtn">Dodaj</button>
+<div id="first-box">
+   <h4 id="first-h4">Dodaj zdjęcie do galerii głównej</h4>
+      <div id="first-div"></div>
+
+      <div id="picture-upload">
+      <input id="my-input" type="file">
+      <input id="my-file-name" placeholder="utwórz nazwę">
+      <button id="my-btn">Dodaj</button>
       <img id= "thumbnail"> 
       </div>
-      <h2 id="myStatus"></h2>
+      <h2 id="my-status"></h2>
 </div>
 
-<div id="secondBox">
-    <h4 id="secondH4">Wprowadź dane użytkownika</h4>
-    <div id="secondDiv">
-      <input id="myName">
-      <input id="mySurname">
-      <input id="myAge">
+<div id="second-box">
+    <h4 id="second-h4">Wprowadź dane użytkownika do bazy</h4>
+    <div id="second-div">
+      <input id="my-name">
+      <input id="my-surname">
+      <input id="my-age">
     
       <select id="department">
         <option>IT</option>
         <option>HR</option>
         <option>FINANCE</option>
       </select>
-      <button id = "myButton">Dodaj</button>
+      <button id = "my-button">Dodaj</button>
     </div> 
 </div>
    <!-- <input id="queryName"> -->
     <br>
     <br>
-<div id="thirdBox">
-    <h4 id="thirdH4">Wyszukaj użytkownika</h4>
-    <div id="thirdDiv">
+<div id="third-box">
+    <h4 id="third-h4">Wyszukaj użytkownika</h4>
+    <div id="third-div">
       <input id="name">
       <input id="surname">
-      <button id="findBtn">Szukaj</button> 
+      <button id="find-btn">Szukaj</button> 
      </div>
     <!-- <button id = "addEmployee">Add employee</button> -->
-      <ol id="usersList"></ol>
+      <ol id="users-list"></ol>
     <br>
     <br>
 </div> 
-
-  
-    <h4 id="fourthH4">Prześlij plik do wybranego albumu</h4>
-  <div id="fourthDiv">  
+<div id="fourth-box"> 
+  <h4 id="fourth-h4">Prześlij plik do wybranego albumu</h4>
+  <div id="fourth-div"> 
     <select id="albums">
-        <option id ="1">Album1</option>
-        <option id="2">Album2</option>
+        <option id ="1">Szkolenia</option>
+        <option id="2">Konferencje</option>
     </select>
-    <input id= "imgInput" type="file">
-    <button id= "albumButton">Dodaj</button>
+    <input id= "img-input" type="file">
+    <button id= "album-button">Dodaj</button>
   </div>
-</div>    
+</div>
+ <div id="fifth-box">
+    <h5>Szkolenia</h5> 
+  <div id="album-box1">
+    <div id="album1-div"></div>
+ </div>
+    <h5>Konferencje</h5>
+  <div id="album-box2">
+    <div id="album2-div"></div>
+  </div>
+</div>
+
+</div>
 </body>
 </html>
