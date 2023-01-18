@@ -19,6 +19,7 @@ const storage = getStorage(app);
 const db = getFirestore(app);
 
 
+//Funkcja do dodawania zdjęć do Storage i wyświetlania tych zdjęć
 const displayGallery = () => {
 
 const myImg = document.createElement("img");
@@ -60,14 +61,6 @@ myStatus.innerText = "Przesłano"
 .then(result => {location.reload(true);
 })
 });
-
-//Wyświetlenie konkretnego pliku, podając jego nazwę przy użyciu getDownloadURL
-// const imageRef = ref(storage, "tatry.JPG");
-// getDownloadURL(imageRef).then(url => {
-//   const img = document.createElement("img");
-//   img.src = url;
-//   document.body.appendChild(img);
-//   })
 
 // Wyświetlenie wszystkich obrazków dostępne w Storage wraz z ich nazwami. Do każdego obrazka dodaj przycisk, który będzie odpowiedzialny za usunięcie obrazka. Po usunięciu obrazka odśwież listę obrazków tak aby usunięty obrazek nie był już więcej wyświetlany. [Nie odświeżaj całej strony]
 
@@ -124,7 +117,6 @@ myAge.value = "";
 
 });
 })
-//document.body.appendChild(button);
 
 //wyszukiwanie użytkownika
 
@@ -141,14 +133,6 @@ findBtn.addEventListener("click", () => {
   const queryUserName = query(users, where("name","==", findName.value), where("surname","==", findSurname.value));
   const queryUserSurname = query(users, where("surname","==", findSurname.value));
   
-  // getDocs(queryUserSurname).then((docs) => {
-  //   docs.forEach(userDoc => {
-  //                 const user = userDoc.data();
-  //                 const userListItem = document.createElement("li");
-  //                 userListItem.innerText = `${user.name} ${user.surname}`;
-  //                usersList.appendChild(userListItem);
-  //   });
-  // })
   usersList.innerText ="";
   getDocs(queryUserName).then((docs) => {
     docs.forEach(userDoc => {
@@ -161,7 +145,7 @@ findBtn.addEventListener("click", () => {
   })
 })
 }
-//dodanie zdjęć do poszczególnych albumów
+//funkcja - dodawanie zdjęć do poszczególnych albumów
 
  const renderAlbums = () => {
 
@@ -254,6 +238,8 @@ listAll(storageAlbum2Ref).then((res) => {
 });
 })
  }
+
+ //KONTENERY 
 
 const firstBox = document.getElementById("first-box");
 const secondBox = document.getElementById("second-box");
