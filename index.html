@@ -17,7 +17,7 @@
   </nav>
 <div id = "page-content" >
 
-<div id="first-box">
+<div id="first-box" style="display: none;">
    <h4 id="first-h4">Dodaj zdjęcie do galerii głównej</h4>
       <div id="first-div"></div>
 
@@ -30,7 +30,7 @@
       <h2 id="my-status"></h2>
 </div>
 
-<div id="second-box">
+<div id="second-box" style="display: none;">
     <h4 id="second-h4">Wprowadź dane użytkownika do bazy</h4>
     <div id="second-div">
       <input id="my-name">
@@ -48,7 +48,7 @@
    <!-- <input id="queryName"> -->
     <br>
     <br>
-<div id="third-box">
+<div id="third-box" style="display: none;">
     <h4 id="third-h4">Wyszukaj użytkownika</h4>
     <div id="third-div">
       <input id="name">
@@ -60,7 +60,7 @@
     <br>
     <br>
 </div> 
-<div id="fourth-box"> 
+<div id="fourth-box" style="display: none;"> 
   <h4 id="fourth-h4">Prześlij plik do wybranego albumu</h4>
   <div id="fourth-div"> 
     <select id="albums">
@@ -71,7 +71,7 @@
     <button id= "album-button">Dodaj</button>
   </div>
 </div>
- <div id="fifth-box">
+ <div id="fifth-box" style="display: none;">
     <h5>Szkolenia</h5> 
   <div id="album-box1">
     <div id="album1-div"></div>
@@ -80,6 +80,23 @@
   <div id="album-box2">
     <div id="album2-div"></div>
   </div>
+</div>
+
+<div id="base-div">
+  <h4>Dodaj użytkownika do bazy czatu</h4>
+  <label>imię</label>
+<input id="user-name">
+  <label>nazwisko</label>
+<input id="user-surname">
+  <label>kolor</label>
+<input id="user-color" type="color">
+<button id="add-btn">Dodaj</button>
+</div>
+
+<div id="chat-div">
+<select id="choose-user">
+  <option value="">---wybierz użytkownika---</option>
+</select>
 </div>
 
 </div>
