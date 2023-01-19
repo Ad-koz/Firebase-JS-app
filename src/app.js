@@ -249,21 +249,43 @@ const fifthBox = document.getElementById("fifth-box");
 
 const spans = document.getElementsByTagName("span");
 const divContent = document.getElementById("page-content");
-spans[0].addEventListener("click", () => {
-  
+
+spans[0].addEventListener("click", () => { 
 //  divContent.innerHTML = "";
-thirdBox.innerHTML="";
-secondBox.innerHTML="";
+thirdBox.style.display="none";
+secondBox.style.display="none";
+firstBox.style.display="block";
+  fourthBox.style.display="block";
+  fifthBox.style.display="block";
+
   renderAlbums();
   displayGallery();
 });
 
+
 spans[1].addEventListener("click", () => {
   //  divContent.innerHTML = "";
-  firstBox.innerHTML="";
-  fourthBox.innerHTML="";
-  fifthBox.innerHTML="";
+  firstBox.style.display="none";
+  fourthBox.style.display="none";
+  fifthBox.style.display="none";
+  thirdBox.style.display="block";
+secondBox.style.display="block";
    usersDataBase();
- })
+ });
+
+
+
+
+ //CZAT
+
+ //inputs
+ const chatUserName = document.getElementById("user-name");
+ const chatUserSurname = document.getElementById("user-surname");
+ const chatUserColor = document.getElementById("user-color");
+
+ //selects
+
+ const chatUserSelect = document.getElementById("choose-user");
+
 
 
